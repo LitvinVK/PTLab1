@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from .Types import DataType
-from .DataReader import DataReader
+from Types import DataType
+from DataReader import DataReader
 
 import xml.etree.cElementTree as xml
 import random
@@ -23,12 +23,10 @@ class XmlDataReader(DataReader):
             self.students[self.key] = []
 
             for student_child in student_children:
-                self.students[self.key].append((student_child.tag, int(student_child.text)))
+                self.students[self.key].append((student_child.tag,
+                                                int(student_child.text)))
 
         return self.students
-                
-
-        
         # print(self.students)
 
         # for student in students:
@@ -46,5 +44,6 @@ class XmlDataReader(DataReader):
         # if len(self.students100) == 0:
         #     print("Ни у одного студента нет 100 баллов по всем дисциплинам")
         # else:
-        #     print("У студента", self.students100[random.randint(0, len(self.students100)-1)],
-        #         "100 баллов по всем дисциплинам")
+        #     print("У студента", self.students100
+        #     [random.randint(0, len(self.students100)-1)],
+        #     "100 баллов по всем дисциплинам")
