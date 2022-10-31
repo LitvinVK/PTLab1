@@ -49,7 +49,7 @@ class TestPrintStudents100:
                 ]
         }
 
-        students: str = "У студента Абрамов Петр" \
+        students: str = "У студента Абрамов Петр"\
                         " Сергеевич 100 баллов по всем дисциплинам"
 
         return data, students
@@ -73,9 +73,9 @@ class TestPrintStudents100:
                 ]
         }
 
-        students: str = ["У студента Абрамов Петр Сергеевич"\
+        students: str = ["У студента Абрамов Петр Сергеевич"
                          " 100 баллов по всем дисциплинам",
-                         "У студента Петров Игорь Владимирович"\
+                         "У студента Петров Игорь Владимирович"
                          " 100 баллов по всем дисциплинам"]
 
         return data, students
@@ -102,8 +102,8 @@ class TestPrintStudents100:
         result100 = PrintStudents100(input_data100[0]).calc()
         assert result100 == input_data100[1]
 
-    def test_init_print_students_100_2(self, input_data100_2: tuple[DataType,
-                                                      str]) -> None:
+    def test_init_print_students_100_2(self, input_data100_2:
+                                       tuple[DataType, str]) -> None:
 
         print_students_100_2 = PrintStudents100(input_data100_2[0])
         assert input_data100_2[0] == print_students_100_2.data
