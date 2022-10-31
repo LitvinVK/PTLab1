@@ -24,7 +24,7 @@ def main():
         reader = TextDataReader()
     else:
         reader = XmlDataReader()
-    
+
     students = reader.read(path)
     print("Students: ", students, "\n")
 

@@ -26,4 +26,3 @@ class XmlDataReader(DataReader):
                                                 int(student_child.text)))
 
         return self.students
-
